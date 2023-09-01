@@ -1,13 +1,117 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --hd-dark-blue: #1D3557;
+  --hd-light-blue: #457B9D;
+  --body-bg: #F1FAEE;
+  --card-blue-bg: #A8DADC;
+  --text: #1D3557;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: red; */
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-weight: 700;
+  text-align: center;
+}
+img {
+  max-width: 100%;
+}
+
+header {
+  height: 370px;
+  background-color: var(--card-blue-bg);
+  background-image: url(./images/torshov-image.png);
+  background-position: center;
+  background-size: cover;
+  display: grid; place-content: center;
+  padding: 0 50px;
+}
+header > div {
+  max-width: 420px;
+  margin: 0 auto;
+  color: white;
+}
+header p {
+  background-color: var(--hd-light-blue);
+  padding: 8px 25px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: fit-content;
+  font-size: 18px;
+}
+header h1 {
+  background-color: var(--hd-dark-blue);
+  padding: 8px 12px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 0 auto; 
+  font-size: 32px;
+}
+
+main {
+  padding: 35px;
+  background-color: var(--body-bg);
+}
+.activity-container {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (min-width: 750px) {
+  .activity-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.activity-card {
+  font-size: 16px;
+  max-width: 200px;
+}
+.activity-card > p {
+  font-weight: 400;
+}
+.activity-card > img {
+  width: 100px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+footer {
+  padding: 50px;
+}
+.footer-card {
+  border-radius: 10px;
+  background: var(--card-blue-bg);
+  box-shadow: 0px 6px 0px 0px #1D3557;
+  padding: 20px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+.footer-card p {
+  font-weight: 400;
+  font-size: 16px;
+  font-style: italic;
+  margin: 15px 0;
+}
+footer img {
+  mix-blend-mode: luminosity;
+  max-width: 190px;
 }

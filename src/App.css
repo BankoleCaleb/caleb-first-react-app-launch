@@ -1,3 +1,11 @@
+:root {
+  --hd-dark-blue: #1D3557;
+  --hd-light-blue: #457B9D;
+  --body-bg: #F1FAEE;
+  --card-blue-bg: #A8DADC;
+  --text: #1D3557;
+}
+
 .App {
   text-align: center;
 }
